@@ -3,6 +3,8 @@ package com.kittu.core.datastructures;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 
+import com.sun.java_cup.internal.runtime.Scanner;
+
 public class Logic1ExampleConcurrentNavigableMap {
 	
 	
@@ -28,8 +30,8 @@ public class Logic1ExampleConcurrentNavigableMap {
 	public static NavigableMap<Integer, String> map = new TreeMap<Integer, String>();
 	static {
 		map.put(1, "A");   // 1..5 => A
-		map.put(6, null);  // 6 => empty
-		map.put(7, "B");   // 7..10 => B
+		map.put(5, "A");  // 6 => empty
+		map.put(4, "B");   // 7..10 => B
 		map.put(11, "C");  // 11..15 => C
 		map.put(16, null); // 16.. => empty
 	}
@@ -39,12 +41,14 @@ public class Logic1ExampleConcurrentNavigableMap {
 		System.out.println(".................");
 		System.out.println(" 2 value  : " + map.floorEntry(2).getValue());
 		System.out.println(" 4 value  : " + map.floorEntry(4).getValue());
+		System.out.println(" 5 value  : " + map.floorEntry(5).getValue());
 		System.out.println(" 6 value  : " + map.floorEntry(6).getValue());
 		System.out.println(" 8 value  : " + map.floorEntry(8).getValue());
 		System.out.println(" 10 value : " + map.floorEntry(10).getValue());
 		System.out.println(" 13 value : " + map.floorEntry(13).getValue());
 		System.out.println(" 15 value : " + map.floorEntry(15).getValue());
 		System.out.println(" 16 value : " + map.floorEntry(16).getValue());
+		System.out.println(" 17 value : " + map.floorEntry(16).getValue());
 		
 		System.out.println("---------------------------");
 		
@@ -60,6 +64,8 @@ public class Logic1ExampleConcurrentNavigableMap {
 		*/
 		
 		System.out.println(".................");
+		
+		
 
 	}
 
